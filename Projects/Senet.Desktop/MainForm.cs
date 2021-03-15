@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Extensions.Configuration;
+using Senet.Desktop;
 
 namespace Senete.Desktop
 {
@@ -16,6 +18,11 @@ namespace Senete.Desktop
       _config = config;
       _serviceProvider = serviceProvider;
       InitializeComponent();
+
+      foreach (ISenetControl control in Controls.OfType<ISenetControl>())
+      {
+        control.InitSenetControl(serviceProvider);
+      }
     }
   }
 }
