@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Senet.Desktop;
 
 namespace Senete.Desktop
 {
@@ -30,7 +31,8 @@ namespace Senete.Desktop
     private static void ConfigureServices(IConfiguration configuration, IServiceCollection services)
     {
       services
-        .AddSingleton<MainForm>();
+        .AddSingleton<MainForm>()
+        .AddSingleton<IRng, Rng>();
     }
   }
 }

@@ -29,36 +29,32 @@ namespace Senete.Desktop
     /// </summary>
     private void InitializeComponent()
     {
-      this.pictureBox1 = new System.Windows.Forms.PictureBox();
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+      this.paddleRoller1 = new Senet.Desktop.Controls.PaddleRoller();
       this.SuspendLayout();
       // 
-      // pictureBox1
+      // paddleRoller1
       // 
-      this.pictureBox1.Image = global::Senet.Desktop.Properties.Resources.paddle_up;
-      this.pictureBox1.InitialImage = null;
-      this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-      this.pictureBox1.Name = "pictureBox1";
-      this.pictureBox1.Size = new System.Drawing.Size(24, 144);
-      this.pictureBox1.TabIndex = 0;
-      this.pictureBox1.TabStop = false;
+      this.paddleRoller1.Location = new System.Drawing.Point(12, 12);
+      this.paddleRoller1.MinimumSize = new System.Drawing.Size(311, 164);
+      this.paddleRoller1.Name = "paddleRoller1";
+      this.paddleRoller1.Size = new System.Drawing.Size(311, 164);
+      this.paddleRoller1.TabIndex = 1;
       // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(766, 429);
-      this.Controls.Add(this.pictureBox1);
+      this.Controls.Add(this.paddleRoller1);
       this.Name = "MainForm";
       this.Text = "Form1";
-      ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
 
     }
 
     #endregion
 
-    private System.Windows.Forms.PictureBox pictureBox1;
+    private Senet.Desktop.Controls.PaddleRoller paddleRoller1;
   }
 }
 
